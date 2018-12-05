@@ -15,7 +15,7 @@ CREATE TABLE DimBroker  ( SK_BrokerID  INTEGER NOT NULL PRIMARY KEY,
 							EndDate date NOT NULL							
 );
 
-CREATE TABLE DimCustomer  ( SK_CustomerID  INTEGER NOT NULL PRIMARY KEY,
+CREATE TABLE DimCustomer  ( SK_CustomerID  SERIAL PRIMARY KEY,
 							CustomerID INTEGER NOT NULL,
 							TaxID CHAR(20) NOT NULL,
 							Status CHAR(10) NOT NULL,
@@ -50,7 +50,7 @@ CREATE TABLE DimCustomer  ( SK_CustomerID  INTEGER NOT NULL PRIMARY KEY,
 							EndDate date NOT NULL
 );
 
-CREATE TABLE DimAccount  ( SK_AccountID  INTEGER NOT NULL PRIMARY KEY,
+CREATE TABLE DimAccount  ( SK_AccountID SERIAL PRIMARY KEY,
                             AccountID  INTEGER NOT NULL,
                             SK_BrokerID  INTEGER NOT NULL REFERENCES DimBroker (SK_BrokerID),
                             SK_CustomerID  INTEGER NOT NULL REFERENCES DimCustomer (SK_CustomerID),
