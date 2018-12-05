@@ -1,0 +1,62 @@
+id,name,abbreviation,country
+1,Alabama,AL,United States of America
+2,Alaska,AK,United States of America
+3,Arizona,AZ,United States of America
+4,Arkansas,AR,United States of America
+5,California,CA,United States of America
+6,Colorado,CO,United States of America
+7,Connecticut,CT,United States of America
+8,Delaware,DE,United States of America
+9,Florida,FL,United States of America
+10,Georgia,GA,United States of America
+11,Hawaii,HI,United States of America
+12,Idaho,ID,United States of America
+13,Illinois,IL,United States of America
+14,Indiana,IN,United States of America
+15,Iowa,IA,United States of America
+16,Kansas,KS,United States of America
+17,Kentucky,KY,United States of America
+18,Louisiana,LA,United States of America
+19,Maine,ME,United States of America
+20,Maryland,MD,United States of America
+21,Massachusetts,MA,United States of America
+22,Michigan,MI,United States of America
+23,Minnesota,MN,United States of America
+24,Mississippi,MS,United States of America
+25,Missouri,MO,United States of America
+26,Montana,MT,United States of America
+27,Nebraska,NE,United States of America
+28,Nevada,NV,United States of America
+29,New Hampshire,NH,United States of America
+30,New Jersey,NJ,United States of America
+31,New Mexico,NM,United States of America
+32,New York,NY,United States of America
+33,North Carolina,NC,United States of America
+34,North Dakota,ND,United States of America
+35,Ohio,OH,United States of America
+36,Oklahoma,OK,United States of America
+37,Oregon,OR,United States of America
+38,Pennsylvania,PA,United States of America
+39,Rhode Island,RI,United States of America
+40,South Carolina,SC,United States of America
+41,South Dakota,SD,United States of America
+42,Tennessee,TN,United States of America
+43,Texas,TX,United States of America
+44,Utah,UT,United States of America
+45,Vermont,VT,United States of America
+46,Virginia,VA,United States of America
+47,Washington,WA,United States of America
+48,West Virginia,WV,United States of America
+49,Wisconsin,WI,United States of America
+50,Wyoming,WY,United States of America
+51,Washington DC,DC,United States of America
+60,Alberta,AB,Canada
+61,British Columbia,BC,Canada
+62,Manitoba,MB,Canada
+63,New Brunswick,NB,Canada
+64,Newfoundland and Labrador,NL,Canada
+65,Nova Scotia,NS,Canada
+66,Ontario,ON,Canada
+67,Prince Edward Island,PE,Canada
+68,Quebec,QC,Canada
+69,Saskatchewan,SK,Canada

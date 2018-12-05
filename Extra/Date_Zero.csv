@@ -1,0 +1,2 @@
+sk_dateid,datevalue,datedesc,calendaryearid,calendaryeardesc,calendarqtrid,calendarqtrdesc,calendarmonthid,calendarmonthdesc,calendarweekid,calendarweekdesc,dayofweeknumeric,dayofweekdesc,fiscalyearid,fiscalyeardesc,fiscalqtrid,fiscalqtrdesc,holidayflag
+0,1970-01-01,Zero,0,Zero,0,Zero,0,Zero,0,Zero,0,Zero,0,Zero,0,Zero,FALSE
