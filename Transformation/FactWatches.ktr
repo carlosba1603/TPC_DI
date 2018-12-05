@@ -1288,7 +1288,7 @@
     <enclosure>"</enclosure>
     <enclosure_breaks>N</enclosure_breaks>
     <escapechar />
-    <header>Y</header>
+    <header>N</header>
     <nr_headerlines>1</nr_headerlines>
     <footer>N</footer>
     <nr_footerlines>1</nr_footerlines>
@@ -1308,7 +1308,7 @@
     <length>Characters</length>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C:\Users\jp\Documents\GitHub\TPCDI-PDI\sample_data_5\Batch1\WatchHistory.txt</name>
+      <name>${Internal.Transformation.Filename.Directory}\..\Source\Batch1\WatchHistory.txt</name>
       <filemask />
       <exclude_filemask />
       <file_required>N</file_required>
@@ -1433,7 +1433,7 @@
     <schema />
     <table>factwatches</table>
     <commit>1000</commit>
-    <truncate>N</truncate>
+    <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
     <use_batch>Y</use_batch>
     <specify_fields>Y</specify_fields>
