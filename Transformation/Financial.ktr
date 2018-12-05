@@ -436,14 +436,14 @@
   <notepads>
   </notepads>
   <connection>
-    <name>tpcdi</name>
+    <name>TPC_DI</name>
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>tpcdi</database>
+    <database>${DBNAME}</database>
     <port>5432</port>
     <username>postgres</username>
-    <password>Encrypted 2be98afc819f79394aa1da1608cc3f688</password>
+    <password>${PASS}</password>
     <servername />
     <data_tablespace />
     <index_tablespace />
@@ -552,87 +552,66 @@
     <fields>
       <field>
         <name>PTS</name>
-        <rename />
       </field>
       <field>
         <name>RecType</name>
-        <rename />
       </field>
       <field>
         <name>Year</name>
-        <rename />
       </field>
       <field>
         <name>Quarter</name>
-        <rename />
       </field>
       <field>
         <name>QtrStartDate</name>
-        <rename />
       </field>
       <field>
         <name>PostingDate</name>
-        <rename />
       </field>
       <field>
         <name>Revenue</name>
-        <rename />
       </field>
       <field>
         <name>Earnings</name>
-        <rename />
       </field>
       <field>
         <name>EPS</name>
-        <rename />
       </field>
       <field>
         <name>DilutedEPS</name>
-        <rename />
       </field>
       <field>
         <name>Margin</name>
-        <rename />
       </field>
       <field>
         <name>Inventory</name>
-        <rename />
       </field>
       <field>
         <name>Assets</name>
-        <rename />
       </field>
       <field>
         <name>Liabilities</name>
-        <rename />
       </field>
       <field>
         <name>ShOut</name>
-        <rename />
       </field>
       <field>
         <name>DilutedShOut</name>
-        <rename />
       </field>
       <field>
         <name>CoNameOrCIK</name>
-        <rename />
       </field>
       <field>
         <name>result</name>
-        <rename />
       </field>
       <field>
         <name>sk_companyid</name>
-        <rename />
       </field>
       <field>
         <name>effectivedate</name>
-        <rename />
       </field>
       <field>
         <name>enddate</name>
-        <rename />
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
@@ -970,7 +949,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <schema />
     <table>financial</table>
     <commit>1000</commit>
@@ -1684,7 +1663,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <cache>Y</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
@@ -1743,7 +1722,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <cache>Y</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
