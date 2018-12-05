@@ -1246,15 +1246,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Financial</from>
-      <to>Inacc Customer</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>DimCompany</from>
       <to>StatusType</to>
       <from_nr>0</from_nr>
@@ -1410,6 +1401,15 @@
     <hop>
       <from>FactWatches</from>
       <to>FactHoldings</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Inacc Customer</from>
+      <to>Financial</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
