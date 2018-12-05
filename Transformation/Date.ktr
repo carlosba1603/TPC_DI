@@ -515,7 +515,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <filename>/Users/carlosba1603/git/TPC_DI/Extra/Date_Zero.csv</filename>
+    <filename>${Internal.Transformation.Filename.Directory}/../Extra/Date_Zero.csv</filename>
     <filename_field />
     <rownum_field />
     <include_filename>N</include_filename>
