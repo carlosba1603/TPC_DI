@@ -437,14 +437,14 @@
   <notepads>
   </notepads>
   <connection>
-    <name>tpcdi</name>
+    <name>TPC_DI</name>
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>tpcdi</database>
+    <database>${DBNAME}</database>
     <port>5432</port>
     <username>postgres</username>
-    <password>Encrypted 2be98afc819f79394aa1da1608cc3f688</password>
+    <password>${PASS}</password>
     <servername />
     <data_tablespace />
     <index_tablespace />
@@ -661,7 +661,7 @@
     </partitioning>
     <valuename>sk_sec_id</valuename>
     <use_database>N</use_database>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <schema />
     <seqname>SEQ_</seqname>
     <use_counter>Y</use_counter>
@@ -991,6 +991,49 @@
     </GUI>
   </step>
   <step>
+    <name>Filter on CoNameOrCIK</name>
+    <type>FilterRows</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <send_true_to>lookup companyId</send_true_to>
+    <send_false_to>lookup companyName</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>result</leftvalue>
+        <function>=</function>
+        <rightvalue />
+        <value>
+          <name>constant</name>
+          <type>Boolean</type>
+          <text>Y</text>
+          <length>-1</length>
+          <precision>-1</precision>
+          <isnull>N</isnull>
+          <mask />
+        </value>
+      </condition>
+    </compare>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Merge status</name>
     <type>MergeJoin</type>
     <description />
@@ -1257,7 +1300,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <sql>SELECT * FROM statustype</sql>
     <limit>0</limit>
     <lookup />
@@ -1278,6 +1321,30 @@
     </GUI>
   </step>
   <step>
+    <name>Union</name>
+    <type>Dummy</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1040</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>dimsecurity</name>
     <type>TableOutput</type>
     <description />
@@ -1288,7 +1355,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <schema />
     <table>dimsecurity</table>
     <commit>1000</commit>
@@ -1381,120 +1448,6 @@
     </GUI>
   </step>
   <step>
-    <name>parseFloat Dividend</name>
-    <type>ScriptValueMod</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>
-      <jsScript>
-        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>//Script here
-
-var Dividend1 
-
-Dividend1 = parseFloat (Dividend);</jsScript_script>
-      </jsScript>
-    </jsScripts>
-    <fields>
-      <field>
-        <name>Dividend1</name>
-        <rename>Dividend1</rename>
-        <type>Number</type>
-        <length>16</length>
-        <precision>3</precision>
-        <replace>N</replace>
-      </field>
-    </fields>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1739</xloc>
-      <yloc>210</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Filter on CoNameOrCIK</name>
-    <type>FilterRows</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <send_true_to>lookup companyId</send_true_to>
-    <send_false_to>lookup companyName</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>result</leftvalue>
-        <function>=</function>
-        <rightvalue />
-        <value>
-          <name>constant</name>
-          <type>Boolean</type>
-          <text>Y</text>
-          <length>-1</length>
-          <precision>-1</precision>
-          <isnull>N</isnull>
-          <mask />
-        </value>
-      </condition>
-    </compare>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>768</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Union</name>
-    <type>Dummy</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1040</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>lookup companyId</name>
     <type>DBLookup</type>
     <description />
@@ -1505,7 +1458,7 @@ Dividend1 = parseFloat (Dividend);</jsScript_script>
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -1564,7 +1517,7 @@ Dividend1 = parseFloat (Dividend);</jsScript_script>
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -1609,6 +1562,53 @@ Dividend1 = parseFloat (Dividend);</jsScript_script>
     <GUI>
       <xloc>912</xloc>
       <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>parseFloat Dividend</name>
+    <type>ScriptValueMod</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+var Dividend1 
+
+Dividend1 = parseFloat (Dividend);</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>Dividend1</name>
+        <rename>Dividend1</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>3</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1739</xloc>
+      <yloc>210</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
