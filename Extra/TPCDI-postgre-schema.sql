@@ -277,8 +277,8 @@ CREATE TABLE TradeType ( TT_ID CHAR(3) Not NULL,
 CREATE TABLE AuditTable ( DataSet CHAR(20) Not Null,
 							BatchID numeric(5),
 							AT_Date DATE,
-							AT_Attribute CHAR(50),
-							AT_Value numeric(15),
+							Attribute CHAR(50),
+							Value numeric(15),
 							DValue numeric(15,5)
 );
 
