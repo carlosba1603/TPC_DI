@@ -21,7 +21,7 @@ CREATE FUNCTION fixAccountOnUpdateCustomer() RETURNS trigger AS $customer_stamp$
 	
 		INSERT INTO dimAccount ( accountid, sk_brokerid, sk_customerid, status, accountdesc, taxstatus, iscurrent, batchid, effectivedate, enddate )
 		(
-			select accountid, sk_brokerid, NEW.sk_customerid, status, accountdesc, taxstatus, TRUE, batchid, NEW.effectivedate
+			select accountid, sk_brokerid, NEW.sk_customerid, status, accountdesc, taxstatus, TRUE, batchid, NEW.effectivedate, NEW.enddate
 			from dimAccount
 			where sk_accountid = (  select max( sk_accountid )
 									from dimAccount where sk_customerid = (	select max( sk_customerid )
