@@ -281,30 +281,3 @@ CREATE TABLE AuditTable ( DataSet CHAR(20) Not Null,
 							Value numeric(15),
 							DValue numeric(15,5)
 );
-
-CREATE INDEX PIndex ON dimtrade (tradeid);
-CREATE TABLE dimtradeforexperiment
-(
-  tradeid integer NOT NULL,
-  sk_brokerid integer,
-  date_int integer,
-  time_int integer,
-  status character(10) NOT NULL,
-  dt_type character(12) NOT NULL,
-  cashflag boolean NOT NULL,
-  sk_securityid integer NOT NULL,
-  sk_companyid integer NOT NULL,
-  quantity numeric(6,0) NOT NULL,
-  bidprice numeric(8,2) NOT NULL,
-  sk_customerid integer NOT NULL,
-  sk_accountid integer NOT NULL,
-  executedby character(64) NOT NULL,
-  tradeprice numeric(8,2),
-  fee numeric(10,2),
-  commission numeric(10,2),
-  tax numeric(10,2),
-  batchid numeric(5,0) NOT NULL,
-  th_st_id character(4)
-);
-
-
