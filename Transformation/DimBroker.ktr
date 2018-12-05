@@ -437,14 +437,14 @@
   <notepads>
   </notepads>
   <connection>
-    <name>tpcdi</name>
+    <name>TPC_DI</name>
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>tpcdi</database>
+    <database>${DBNAME}</database>
     <port>5432</port>
     <username>postgres</username>
-    <password>Encrypted 2be98afc81ac88190ac0bab63ce93bcc9</password>
+    <password>${PASS}</password>
     <servername />
     <data_tablespace />
     <index_tablespace />
@@ -607,7 +607,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <schema />
     <table>dimbroker</table>
     <commit>1000</commit>
@@ -812,7 +812,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <filename>${Internal.Entry.Current.Directory}\..\sample_data_5\Batch1\HR.csv</filename>
+    <filename>${Internal.Entry.Current.Directory}\..\Source\Batch1\HR.csv</filename>
     <filename_field />
     <rownum_field />
     <include_filename>N</include_filename>
@@ -1182,7 +1182,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <sql>SELECT coalesce(min(datevalue),current_date-100000) as startDate FROM dimdate</sql>
     <limit>0</limit>
     <lookup />
