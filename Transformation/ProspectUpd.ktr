@@ -436,14 +436,14 @@
   <notepads>
   </notepads>
   <connection>
-    <name>tpcdi</name>
+    <name>TPC_DI</name>
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>tpcdi</database>
+    <database>${DBNAME}</database>
     <port>5432</port>
     <username>postgres</username>
-    <password>Encrypted 2be98afc819f79394aa1da1608cc3f688</password>
+    <password>${PASS}</password>
     <servername />
     <data_tablespace />
     <index_tablespace />
@@ -1271,7 +1271,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <schema />
     <table>prospect</table>
     <commit>1000</commit>
@@ -1422,7 +1422,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <sql>SELECT firstname,lastname,addressline1,addressline2,postalcode,status  FROM dimcustomer
 WHERE status = 'ACTIVE'
 </sql>
@@ -1455,7 +1455,7 @@ WHERE status = 'ACTIVE'
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <sql>SELECT *  FROM prospect</sql>
     <limit>0</limit>
     <lookup />
