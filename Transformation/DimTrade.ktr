@@ -437,7 +437,7 @@
   <notepads>
   </notepads>
   <connection>
-    <name>tpcdi</name>
+    <name>TPC_DI</name>
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
@@ -700,7 +700,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <cache>Y</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
@@ -747,7 +747,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <cache>Y</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
@@ -794,7 +794,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <cache>Y</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
@@ -841,7 +841,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <cache>Y</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
@@ -888,7 +888,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <schema />
     <table>dimtrade</table>
     <commit>1000</commit>
@@ -1001,30 +1001,6 @@
     <GUI>
       <xloc>1440</xloc>
       <yloc>224</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>dummy</name>
-    <type>Dummy</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1152</xloc>
-      <yloc>352</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2350,7 +2326,7 @@ if (TH_ST_ID == 'CMPT' || TH_ST_ID == 'CNCL') sk_closetimeid = TH_DTS.getTime()
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <sql>SELECT * FROM dimaccount</sql>
     <limit>0</limit>
     <lookup />
@@ -2381,7 +2357,7 @@ if (TH_ST_ID == 'CMPT' || TH_ST_ID == 'CNCL') sk_closetimeid = TH_DTS.getTime()
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <sql>SELECT * FROM dimsecurity</sql>
     <limit>0</limit>
     <lookup />
@@ -2398,6 +2374,30 @@ if (TH_ST_ID == 'CMPT' || TH_ST_ID == 'CNCL') sk_closetimeid = TH_DTS.getTime()
     <GUI>
       <xloc>1056</xloc>
       <yloc>16</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dummy</name>
+    <type>Dummy</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1152</xloc>
+      <yloc>352</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
