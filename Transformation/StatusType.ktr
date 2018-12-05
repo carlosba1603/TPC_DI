@@ -437,14 +437,14 @@
   <notepads>
   </notepads>
   <connection>
-    <name>tpcdi</name>
+    <name>TPC_DI</name>
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>tpcdi</database>
+    <database>${DBNAME}</database>
     <port>5432</port>
     <username>postgres</username>
-    <password>Encrypted 2be98afc81ac88190ac0bab63ce93bcc9</password>
+    <password>${PASS}</password>
     <servername />
     <data_tablespace />
     <index_tablespace />
@@ -505,7 +505,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <schema />
     <table>statustype</table>
     <commit>1000</commit>
