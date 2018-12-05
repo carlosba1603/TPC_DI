@@ -1593,8 +1593,8 @@ var UPDATED = 'Y'</jsScript_script>
       <schema_name />
     </partitioning>
     <connection>TPC_DI</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
     <lookup>
       <schema />
@@ -1689,8 +1689,8 @@ var UPDATED = 'Y'</jsScript_script>
       <schema_name />
     </partitioning>
     <connection>TPC_DI</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
     <lookup>
       <schema />
