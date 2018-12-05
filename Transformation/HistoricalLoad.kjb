@@ -484,8 +484,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>768</xloc>
-      <yloc>272</yloc>
+      <xloc>848</xloc>
+      <yloc>128</yloc>
     </entry>
     <entry>
       <name>New Account</name>
@@ -556,8 +556,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>848</xloc>
-      <yloc>128</yloc>
+      <xloc>768</xloc>
+      <yloc>272</yloc>
     </entry>
     <entry>
       <name>Inacc Customer</name>
@@ -592,8 +592,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1136</xloc>
-      <yloc>160</yloc>
+      <xloc>1040</xloc>
+      <yloc>128</yloc>
     </entry>
     <entry>
       <name>Close Acct</name>
@@ -994,15 +994,6 @@
   </entries>
   <hops>
     <hop>
-      <from>Updt Account</from>
-      <to>Close Acct</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>Prospect</from>
       <to>DimBroker</to>
       <from_nr>0</from_nr>
@@ -1138,7 +1129,25 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
+      <from>START</from>
+      <to>Date</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
       <from>AddAccount</from>
+      <to>Updt Account</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Updt Account</from>
       <to>Updt Customer</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -1148,21 +1157,12 @@
     </hop>
     <hop>
       <from>Updt Customer</from>
-      <to>Updt Account</to>
+      <to>Close Acct</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>START</from>
-      <to>Date</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
     </hop>
   </hops>
   <notepads>

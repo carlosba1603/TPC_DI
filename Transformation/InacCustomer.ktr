@@ -591,7 +591,7 @@
     <hop>
       <from>Stream lookup 3</from>
       <to>Table output 2</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Table output</from>
