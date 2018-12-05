@@ -436,14 +436,14 @@
   <notepads>
   </notepads>
   <connection>
-    <name>tpcdi</name>
+    <name>TPC_DI</name>
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>tpcdi</database>
+    <database>${DBNAME}</database>
     <port>5432</port>
     <username>postgres</username>
-    <password>Encrypted 2be98afc819f79394aa1da1608cc3f688</password>
+    <password>${PASS}</password>
     <servername />
     <data_tablespace />
     <index_tablespace />
@@ -1511,7 +1511,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <sql>select sk_companyid, fi_qtr_start_date, fi_year, fi_qtr, fi_basic_eps,
 sum(fi_basic_eps) over (partition by sk_companyid
 						order by fi_qtr_start_date
@@ -1934,7 +1934,7 @@ order by sk_companyid, fi_qtr_start_date</sql>
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <cache>Y</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
@@ -1987,7 +1987,7 @@ order by sk_companyid, fi_qtr_start_date</sql>
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <cache>Y</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
@@ -2094,7 +2094,7 @@ order by sk_companyid, fi_qtr_start_date</sql>
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <schema />
     <table>factmarkethistory</table>
     <commit>1000</commit>
@@ -2230,7 +2230,7 @@ order by sk_companyid, fi_qtr_start_date</sql>
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <cache>Y</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
@@ -2602,7 +2602,7 @@ sk_low= parseInt(sk_lowDate);</jsScript_script>
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <cache>Y</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
@@ -2655,7 +2655,7 @@ sk_low= parseInt(sk_lowDate);</jsScript_script>
       <method>none</method>
       <schema_name />
     </partitioning>
-    <connection>tpcdi</connection>
+    <connection>TPC_DI</connection>
     <cache>Y</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
