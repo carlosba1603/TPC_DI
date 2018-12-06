@@ -495,112 +495,32 @@
     </hop>
     <hop>
       <from>Add BatchId</from>
-      <to>Switch / Case</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Switch / Case</from>
       <to>dimcustomer lookup</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Switch / Case</from>
-      <to>Dummy (do nothing)</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Switch / Case</from>
-      <to>dimcustomer lookup 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>dimdate</from>
-      <to>dimCompany</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>dimdate 2</from>
-      <to>Insert / Update</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>dimcustomer lookup 2</from>
-      <to>Filter rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows</from>
-      <to>Select values</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values</from>
-      <to>dimsecurity lookup 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows 2</from>
-      <to>Select values 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>dimsecurity lookup 2</from>
-      <to>Filter rows 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 2</from>
-      <to>dimdate 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows 2 2</from>
-      <to>Select values 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>dimsecurity lookup</from>
-      <to>Filter rows 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 2 2</from>
       <to>dimdate</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filter rows 3</from>
-      <to>Select values 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 3</from>
+      <from>dimcustomer lookup</from>
       <to>dimsecurity lookup</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>dimcustomer lookup</from>
-      <to>Filter rows 3</to>
+      <from>dimdate</from>
+      <to>Active/Cancelled</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filter rows</from>
-      <to>Dummy (do nothing) 2</to>
+      <from>Active/Cancelled</from>
+      <to>factwatches</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filter rows 3</from>
-      <to>Dummy (do nothing) 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows 2 2</from>
-      <to>Dummy (do nothing) 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows 2</from>
-      <to>Dummy (do nothing) 2 2</to>
+      <from>Active/Cancelled</from>
+      <to>Insert / Update</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -638,633 +558,6 @@
     </remotesteps>
     <GUI>
       <xloc>272</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Dummy (do nothing)</name>
-    <type>Dummy</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>368</xloc>
-      <yloc>224</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Dummy (do nothing) 2</name>
-    <type>Dummy</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>816</xloc>
-      <yloc>672</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Dummy (do nothing) 2 2</name>
-    <type>Dummy</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1024</xloc>
-      <yloc>656</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Dummy (do nothing) 3</name>
-    <type>Dummy</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>784</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Dummy (do nothing) 4</name>
-    <type>Dummy</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1056</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Filter rows</name>
-    <type>FilterRows</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <send_true_to>Select values</send_true_to>
-    <send_false_to>Dummy (do nothing) 2</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <conditions>
-          <condition>
-            <negated>N</negated>
-            <leftvalue>W_DTS</leftvalue>
-            <function>&gt;=</function>
-            <rightvalue>effectivedate</rightvalue>
-          </condition>
-          <condition>
-            <negated>N</negated>
-            <operator>AND</operator>
-            <conditions>
-              <condition>
-                <negated>N</negated>
-                <leftvalue>W_DTS</leftvalue>
-                <function>&lt;=</function>
-                <rightvalue>enddate</rightvalue>
-              </condition>
-              <condition>
-                <negated>N</negated>
-                <operator>OR</operator>
-                <leftvalue>enddate</leftvalue>
-                <function>IS NULL</function>
-                <rightvalue />
-              </condition>
-            </conditions>
-          </condition>
-        </conditions>
-      </condition>
-    </compare>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>624</xloc>
-      <yloc>528</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Filter rows 2</name>
-    <type>FilterRows</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <send_true_to>Select values 2</send_true_to>
-    <send_false_to>Dummy (do nothing) 2 2</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <conditions>
-          <condition>
-            <negated>N</negated>
-            <leftvalue>W_DTS</leftvalue>
-            <function>&gt;=</function>
-            <rightvalue>effectivedate</rightvalue>
-          </condition>
-          <condition>
-            <negated>N</negated>
-            <operator>AND</operator>
-            <conditions>
-              <condition>
-                <negated>N</negated>
-                <leftvalue>W_DTS</leftvalue>
-                <function>&lt;=</function>
-                <rightvalue>enddate</rightvalue>
-              </condition>
-              <condition>
-                <negated>N</negated>
-                <operator>OR</operator>
-                <leftvalue>enddate</leftvalue>
-                <function>IS NULL</function>
-                <rightvalue />
-              </condition>
-            </conditions>
-          </condition>
-        </conditions>
-      </condition>
-    </compare>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>976</xloc>
-      <yloc>528</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Filter rows 2 2</name>
-    <type>FilterRows</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <send_true_to>Select values 2 2</send_true_to>
-    <send_false_to>Dummy (do nothing) 4</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <conditions>
-          <condition>
-            <negated>N</negated>
-            <leftvalue>W_DTS</leftvalue>
-            <function>&gt;=</function>
-            <rightvalue>effectivedate</rightvalue>
-          </condition>
-          <condition>
-            <negated>N</negated>
-            <operator>AND</operator>
-            <conditions>
-              <condition>
-                <negated>N</negated>
-                <leftvalue>W_DTS</leftvalue>
-                <function>&lt;=</function>
-                <rightvalue>enddate</rightvalue>
-              </condition>
-              <condition>
-                <negated>N</negated>
-                <operator>OR</operator>
-                <leftvalue>enddate</leftvalue>
-                <function>IS NULL</function>
-                <rightvalue />
-              </condition>
-            </conditions>
-          </condition>
-        </conditions>
-      </condition>
-    </compare>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>992</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Filter rows 3</name>
-    <type>FilterRows</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <send_true_to>Select values 3</send_true_to>
-    <send_false_to>Dummy (do nothing) 3</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <conditions>
-          <condition>
-            <negated>N</negated>
-            <leftvalue>W_DTS</leftvalue>
-            <function>&gt;=</function>
-            <rightvalue>effectivedate</rightvalue>
-          </condition>
-          <condition>
-            <negated>N</negated>
-            <operator>AND</operator>
-            <conditions>
-              <condition>
-                <negated>N</negated>
-                <leftvalue>W_DTS</leftvalue>
-                <function>&lt;=</function>
-                <rightvalue>enddate</rightvalue>
-              </condition>
-              <condition>
-                <negated>N</negated>
-                <operator>OR</operator>
-                <leftvalue>enddate</leftvalue>
-                <function>IS NULL</function>
-                <rightvalue />
-              </condition>
-            </conditions>
-          </condition>
-        </conditions>
-      </condition>
-    </compare>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>624</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Insert / Update</name>
-    <type>InsertUpdate</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <connection>TPC_DI</connection>
-    <commit>100</commit>
-    <update_bypassed>Y</update_bypassed>
-    <lookup>
-      <schema />
-      <table>factwatches</table>
-      <key>
-        <name>sk_customerid</name>
-        <field>sk_customerid</field>
-        <condition>=</condition>
-        <name2 />
-      </key>
-      <key>
-        <name>sk_securityid</name>
-        <field>sk_securityid</field>
-        <condition>=</condition>
-        <name2 />
-      </key>
-      <value>
-        <name>sk_dateid_dateremoved</name>
-        <rename>sk_dateid</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1264</xloc>
-      <yloc>528</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <fields>
-      <field>
-        <name>W_C_ID</name>
-      </field>
-      <field>
-        <name>W_S_SYMB</name>
-      </field>
-      <field>
-        <name>W_DTS</name>
-      </field>
-      <field>
-        <name>W_ACTIV</name>
-      </field>
-      <field>
-        <name>BatchID</name>
-      </field>
-      <field>
-        <name>sk_customerid</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>736</xloc>
-      <yloc>528</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 2</name>
-    <type>SelectValues</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <fields>
-      <field>
-        <name>W_C_ID</name>
-      </field>
-      <field>
-        <name>W_S_SYMB</name>
-      </field>
-      <field>
-        <name>W_DTS</name>
-      </field>
-      <field>
-        <name>W_ACTIV</name>
-      </field>
-      <field>
-        <name>BatchID</name>
-      </field>
-      <field>
-        <name>sk_customerid</name>
-      </field>
-      <field>
-        <name>sk_securityid</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1056</xloc>
-      <yloc>528</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 2 2</name>
-    <type>SelectValues</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <fields>
-      <field>
-        <name>W_C_ID</name>
-      </field>
-      <field>
-        <name>W_S_SYMB</name>
-      </field>
-      <field>
-        <name>W_DTS</name>
-      </field>
-      <field>
-        <name>W_ACTIV</name>
-      </field>
-      <field>
-        <name>BatchID</name>
-      </field>
-      <field>
-        <name>sk_customerid</name>
-      </field>
-      <field>
-        <name>sk_securityid</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1136</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 3</name>
-    <type>SelectValues</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <fields>
-      <field>
-        <name>W_C_ID</name>
-      </field>
-      <field>
-        <name>W_S_SYMB</name>
-      </field>
-      <field>
-        <name>W_DTS</name>
-      </field>
-      <field>
-        <name>W_ACTIV</name>
-      </field>
-      <field>
-        <name>BatchID</name>
-      </field>
-      <field>
-        <name>sk_customerid</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>720</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Switch / Case</name>
-    <type>SwitchCase</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <fieldname>W_ACTIV</fieldname>
-    <use_contains>Y</use_contains>
-    <case_value_type>String</case_value_type>
-    <case_value_format />
-    <case_value_decimal />
-    <case_value_group />
-    <default_target_step>Dummy (do nothing)</default_target_step>
-    <cases>
-      <case>
-        <value>ACTV</value>
-        <target_step>dimcustomer lookup</target_step>
-      </case>
-      <case>
-        <value>CNCL</value>
-        <target_step>dimcustomer lookup 2</target_step>
-      </case>
-    </cases>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>368</xloc>
       <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1352,7 +645,7 @@
       <field>
         <name>W_DTS</name>
         <type>Date</type>
-        <format>yyyy-MM-dd HH:mm:ss</format>
+        <format>yyyy-MM-dd</format>
         <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
@@ -1419,7 +712,173 @@
     </GUI>
   </step>
   <step>
-    <name>dimCompany</name>
+    <name>dimcustomer lookup</name>
+    <type>DBLookup</type>
+    <description>dimcustomer lookup
+</description>
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>TPC_DI</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema />
+      <table>dimcustomer</table>
+      <orderby />
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>W_C_ID</name>
+        <field>customerid</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>W_DTS</name>
+        <field>effectivedate</field>
+        <condition>&lt;=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>W_DTS</name>
+        <field>enddate</field>
+        <condition>&gt;</condition>
+        <name2 />
+      </key>
+      <value>
+        <name>sk_customerid</name>
+        <rename>sk_customerid</rename>
+        <default />
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dimdate</name>
+    <type>DBLookup</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>TPC_DI</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema />
+      <table>dimdate</table>
+      <orderby>sk_dateid asc</orderby>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>W_DTS</name>
+        <field>datevalue</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <value>
+        <name>sk_dateid</name>
+        <rename>sk_dateid</rename>
+        <default />
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>720</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dimsecurity lookup</name>
+    <type>DBLookup</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>TPC_DI</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema />
+      <table>dimsecurity</table>
+      <orderby />
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>W_S_SYMB</name>
+        <field>symbol</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>W_DTS</name>
+        <field>effectivedate</field>
+        <condition>&lt;=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>W_DTS</name>
+        <field>enddate</field>
+        <condition>&gt;</condition>
+        <name2 />
+      </key>
+      <value>
+        <name>sk_securityid</name>
+        <rename>sk_securityid</rename>
+        <default />
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>factwatches</name>
     <type>TableOutput</type>
     <description />
     <distribute>Y</distribute>
@@ -1472,16 +931,58 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1376</xloc>
+      <xloc>976</xloc>
       <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>dimcustomer lookup</name>
-    <type>DBLookup</type>
-    <description>dimcustomer lookup
-</description>
+    <name>Active/Cancelled</name>
+    <type>FilterRows</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <send_true_to>factwatches</send_true_to>
+    <send_false_to>Insert / Update</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>W_ACTIV</leftvalue>
+        <function>=</function>
+        <rightvalue />
+        <value>
+          <name>constant</name>
+          <type>String</type>
+          <text>ACTV</text>
+          <length>-1</length>
+          <precision>-1</precision>
+          <isnull>N</isnull>
+          <mask />
+        </value>
+      </condition>
+    </compare>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert / Update</name>
+    <type>InsertUpdate</type>
+    <description />
     <distribute>Y</distribute>
     <custom_distribution />
     <copies>1</copies>
@@ -1490,310 +991,27 @@
       <schema_name />
     </partitioning>
     <connection>TPC_DI</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
     <lookup>
       <schema />
-      <table>dimcustomer</table>
-      <orderby />
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
+      <table>factwatches</table>
       <key>
-        <name>W_C_ID</name>
-        <field>customerid</field>
-        <condition>=</condition>
-        <name2 />
-      </key>
-      <value>
         <name>sk_customerid</name>
-        <rename>sk_customerid</rename>
-        <default />
-        <type>Integer</type>
-      </value>
-      <value>
-        <name>effectivedate</name>
-        <rename>effectivedate</rename>
-        <default />
-        <type>None</type>
-      </value>
-      <value>
-        <name>enddate</name>
-        <rename>enddate</rename>
-        <default />
-        <type>None</type>
-      </value>
-    </lookup>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>512</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>dimcustomer lookup 2</name>
-    <type>DBLookup</type>
-    <description>dimcustomer lookup
-</description>
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <connection>TPC_DI</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema />
-      <table>dimcustomer</table>
-      <orderby />
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>W_C_ID</name>
-        <field>customerid</field>
+        <field>sk_customerid</field>
         <condition>=</condition>
         <name2 />
       </key>
-      <value>
-        <name>sk_customerid</name>
-        <rename>sk_customerid</rename>
-        <default />
-        <type>Integer</type>
-      </value>
-      <value>
-        <name>effectivedate</name>
-        <rename>effectivedate</rename>
-        <default />
-        <type>None</type>
-      </value>
-      <value>
-        <name>enddate</name>
-        <rename>enddate</rename>
-        <default />
-        <type>None</type>
-      </value>
-    </lookup>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>512</xloc>
-      <yloc>528</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>dimdate</name>
-    <type>DBLookup</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <connection>TPC_DI</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema />
-      <table>dimdate</table>
-      <orderby />
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
       <key>
-        <name>W_DTS</name>
-        <field>datevalue</field>
-        <condition>=</condition>
-        <name2 />
-      </key>
-      <value>
-        <name>sk_dateid</name>
-        <rename>sk_dateid</rename>
-        <default />
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1280</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>dimdate 2</name>
-    <type>DBLookup</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <connection>TPC_DI</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema />
-      <table>dimdate</table>
-      <orderby />
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>W_DTS</name>
-        <field>datevalue</field>
-        <condition>=</condition>
-        <name2 />
-      </key>
-      <value>
-        <name>sk_dateid</name>
-        <rename>sk_dateid</rename>
-        <default />
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1152</xloc>
-      <yloc>528</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>dimsecurity lookup</name>
-    <type>DBLookup</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <connection>TPC_DI</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema />
-      <table>dimsecurity</table>
-      <orderby />
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>W_S_SYMB</name>
-        <field>symbol</field>
-        <condition>=</condition>
-        <name2 />
-      </key>
-      <value>
         <name>sk_securityid</name>
-        <rename>sk_securityid</rename>
-        <default />
-        <type>Integer</type>
-      </value>
-      <value>
-        <name>effectivedate</name>
-        <rename>effectivedate</rename>
-        <default />
-        <type>None</type>
-      </value>
-      <value>
-        <name>enddate</name>
-        <rename>enddate</rename>
-        <default />
-        <type>None</type>
-      </value>
-    </lookup>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>848</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>dimsecurity lookup 2</name>
-    <type>DBLookup</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <connection>TPC_DI</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema />
-      <table>dimsecurity</table>
-      <orderby />
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>W_S_SYMB</name>
-        <field>symbol</field>
+        <field>sk_securityid</field>
         <condition>=</condition>
         <name2 />
       </key>
       <value>
-        <name>sk_securityid</name>
-        <rename>sk_securityid</rename>
-        <default />
-        <type>Integer</type>
-      </value>
-      <value>
-        <name>effectivedate</name>
-        <rename>effectivedate</rename>
-        <default />
-        <type>None</type>
-      </value>
-      <value>
-        <name>enddate</name>
-        <rename>enddate</rename>
-        <default />
-        <type>None</type>
+        <name>sk_dateid_dateremoved</name>
+        <rename>sk_dateid</rename>
+        <update>Y</update>
       </value>
     </lookup>
     <cluster_schema />
@@ -1804,8 +1022,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>848</xloc>
-      <yloc>528</yloc>
+      <xloc>976</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
