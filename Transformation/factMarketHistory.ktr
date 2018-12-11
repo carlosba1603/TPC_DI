@@ -1935,13 +1935,13 @@ order by sk_companyid, fi_qtr_start_date</sql>
     <cache_size>0</cache_size>
     <lookup>
       <schema />
-      <table>dimsecurity</table>
+      <table>dimcompany</table>
       <orderby />
       <fail_on_multiple>N</fail_on_multiple>
       <eat_row_on_failure>N</eat_row_on_failure>
       <key>
-        <name>sk_securityid</name>
-        <field>sk_securityid</field>
+        <name>sk_companyid</name>
+        <field>sk_companyid</field>
         <condition>=</condition>
         <name2 />
       </key>
@@ -2563,6 +2563,18 @@ sk_low= parseInt(sk_lowDate);</jsScript_script>
         <name>dm_s_symb</name>
         <field>symbol</field>
         <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>dm_date</name>
+        <field>effectivedate</field>
+        <condition>&lt;=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>dm_date</name>
+        <field>enddate</field>
+        <condition>&gt;</condition>
         <name2 />
       </key>
       <value>
